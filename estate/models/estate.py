@@ -16,12 +16,10 @@ class Estate(models.Model):
     garage = fields.Boolean()
     garden = fields.Boolean()
     garden_area = fields.Integer()
-    garden_orientation = fields.Selection(
-            selection=[
-                ('North'),
-                ('South'),
-                ('East'),
-                ('West')
-
-            ]
-        )
+   # FIXED: Selection field with proper 2-element tuples
+    garden_orientation = fields.Selection([
+        ('north', 'North'),
+        ('south', 'South'),
+        ('east', 'East'),
+        ('west', 'West')
+    ], string="Garden Orientation")
