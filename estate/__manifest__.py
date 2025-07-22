@@ -6,6 +6,8 @@
     'application': True,
     'data':[
         'demo/demo.xml',
-        'security/res_groups.xml'
+        'security/res_groups.xml',
+        'security/ir.model.access.csv'
+
     ]
 }
